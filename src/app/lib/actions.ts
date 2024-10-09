@@ -3,7 +3,7 @@ import { RegisterSchema, LoginSchema } from "@/app/lib/zod"
 import { hashSync } from "bcrypt-ts"
 import { prisma } from "@/app/lib/prisma"
 import { redirect } from "next/navigation"
-import { signIn } from "@/app/auth"
+import { signIn } from "@/auth"
 import { AuthError } from "next-auth"
 
 // Register

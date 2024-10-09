@@ -21,11 +21,11 @@ const Navbar = async () => {
                                     <Link href="/dashboard" className="hover:text-teal-500">Dashboard</Link>
                                 </li>
                                 <li>
-                                    <Link href="/product" className="hover:text-teal-500">Product</Link>
+                                    <Link href="/products" className="hover:text-teal-500">Product</Link>
                                 </li>
                                 {session.user.role === "admin" ? (
                                     <li>
-                                        <Link href="/user" className="hover:text-teal-500">Users</Link>
+                                        <Link href="/users" className="hover:text-teal-500">Users</Link>
                                     </li>
                                 ) : null}
                             </>
@@ -64,7 +64,7 @@ const Navbar = async () => {
                         >
                             <button
                                 type="submit"
-                                className="w-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                className="w-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                             >
                                 Logout
                             </button>
@@ -73,7 +73,7 @@ const Navbar = async () => {
                         <Link href="/login">
                             <button
                                 type="submit"
-                                className="w-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                className="w-full text-white bg-teal-500 hover:bg-teal-600 focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                             >
                                 Login
                             </button>

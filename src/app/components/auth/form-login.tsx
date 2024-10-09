@@ -31,7 +31,7 @@ export default function FormLogin() {
             <LoginButton />
             <p className='text-sm font-light text-gray-500 text-center'>
                 Don&apos;t have an account?
-                <Link href="/register" className='font-medium text-teal-500 hover:underline'> Register</Link>
+                <Link href="/register" className='font-medium text-teal-500 hover:text-teal-600'> Register</Link>
             </p>
         </form>
     )

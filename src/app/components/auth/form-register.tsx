@@ -44,7 +44,7 @@ export default function FormRegister() {
             <RegisterButton />
             <p className='text-sm font-light text-gray-500 text-center'>
                 Already have an account?
-                <Link href="/login" className='font-medium text-teal-500 hover:underline'> Login</Link>
+                <Link href="/login" className='font-medium text-teal-500 hover:text-teal-600'> Login</Link>
             </p>
         </form>
     )

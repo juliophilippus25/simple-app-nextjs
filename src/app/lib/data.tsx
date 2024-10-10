@@ -14,3 +14,27 @@ export const getUsers = async () => {
         console.log(error);
     }
 };
+
+export const getProductsByUser = async () => {
+    const session = await auth();
+
+    if (!session || !session.user) {
+        redirect("/dashboard");
+    }
+
+    const role = session.user.role;
+
+    try {
+        const products = await prisma.product.findMany({
+            where: role === "admin" ? {} : { userId: session.user.id },
+            include: {
+                user: { select: { name: true } },
+                category: { select: { name: true } }
+            },
+        });
+        return products;
+    } catch (error) {
+        console.error("Failed to fetch products:", error);
+        throw new Error("Could not retrieve products.");
+    }
+};

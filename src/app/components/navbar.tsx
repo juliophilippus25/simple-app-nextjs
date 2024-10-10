@@ -21,7 +21,10 @@ const Navbar = async () => {
                                     <Link href="/dashboard" className="hover:text-teal-500">Dashboard</Link>
                                 </li>
                                 <li>
-                                    <Link href="/products" className="hover:text-teal-500">Product</Link>
+                                    <Link href="/categories" className="hover:text-teal-500">Categories</Link>
+                                </li>
+                                <li>
+                                    <Link href="/products" className="hover:text-teal-500">Products</Link>
                                 </li>
                                 {session.user.role === "admin" ? (
                                     <li>

@@ -15,6 +15,19 @@ export const getUsers = async () => {
     }
 };
 
+export const getCategories = async () => {
+    const session = await auth();
+    if (!session || !session.user)
+        redirect("/dashboard");
+
+    try {
+        const categories = await prisma.category.findMany();
+        return categories;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 export const getProductsByUser = async () => {
     const session = await auth();
 
